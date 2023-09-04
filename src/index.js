@@ -7,7 +7,7 @@ import "./index.css";
 function Form() {
   //สิ่งที่เราอยากให้ render
   //Data State
-  const [userName, setUserName] = useState("");
+  // const [userName, setUserName] = useState("");
   //return array เราต้องถอดค่ามันออกมา
   //setUsername is Fn
   const [email, setEmail] = useState("");
@@ -15,13 +15,13 @@ function Form() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   //Error State
-  const [errorUserName, setErrorUserName] = useState("");
+  // const [errorUserName, setErrorUserName] = useState("");
   const [errorEmail, setErrorEmail] = useState("");
   const [errorPassword, setErrorPassword] = useState("");
   const [errorConfirmPassword, setErrorConfirmPassword] = useState("");
 
   //color
-  const [userNameColor, setUserNameColor] = useState("");
+  // const [userNameColor, setUserNameColor] = useState("");
   // สองอันนี้ ใช้ ร่วมกันไม่ได้เพราะ ถ้า username ถูก email ผิด จะแดงทั้งคู่
   const [emailColor, setEmailColor] = useState("");
   const [passwordColor, setPasswordColor] = useState("");
@@ -70,9 +70,10 @@ function Form() {
     <div className="container">
       <form className="form" onSubmit={handleSubmit}>
         {/* เมื่อ user กด submit ให้รัน fn handleSubmit */}
+
         {/* #1 :username */}
         <div className="form-input">
-          <label>Username</label>
+          {/* <label>Username</label>
           <input
             type="text"
             value={userName}
@@ -84,8 +85,9 @@ function Form() {
           {/* onCHange ต้องใส่ฟังชัน */}
           {/* เอา userstate ใส่ตรง value ของ input จะขึ้น state แรกเริ่ม */}
 
-          <small style={{ color: userNameColor }}>{errorUserName}</small>
+          {/* <small style={{ color: userNameColor }}>{errorUserName}</small>  */}
         </div>
+
         {/* #2 : Email */}
         <div className="form-input">
           <label>email</label>
